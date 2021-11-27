@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+
+.videos{
+    width: 80%;
+    margin-left: 10%;
+    align-items: center;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+}
+.videos iframe{
+    margin-left: 20%;
+    margin-top: 30px;
+}
+.titulo{
+    margin-top: 20px;
+width: 80%;
+font-size: 40px;
+margin-left: 10%;
+text-align: center;
+font-family: 'Mochiy Pop P One', sans-serif;
+}

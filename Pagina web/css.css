@@ -1,0 +1,420 @@
+@import url(https://use.fontawesome.com/releases/v5.0.6/css/all.css);
+@import url(https://fonts.googleapis.com/css?family=Oswald:400|Raleway:400,700,400italic,700italic);
+
+
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+}
+
+a {
+    color: #a2ed56;
+}
+
+a:hover {
+    color: #83e4e2;
+    text-decoration: none;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 80em;
+}
+
+main .container {
+    padding: 1em;
+}
+
+p {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 40em;
+}
+
+.screen-reader-text {
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+    width: 1px;
+}
+
+
+
+/************************************************/
+/****************** NAVIGATION ******************/
+/************************************************/
+nav {
+    background: #e5e5e5;
+    color: #1d1f20;
+    left: 0;
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+/*** INPUT ***/
+nav input {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+/*** LABEL ***/
+nav label {
+    cursor: pointer;
+    display: block;
+    font: 20px 'Oswald', sans-serif;
+    padding: 0.5em;
+}
+
+/* Hamburger Icon */
+#menu-icon,
+#menu-icon:before,
+#menu-icon:after {
+    background: #1d1f20;
+    border-radius: 0.05em;
+    height: 0.2em;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+}
+
+#menu-icon {
+    display: inline-block;
+    margin: 0.4em 0;
+    max-width: 1em;
+    position: relative;
+}
+
+nav label #menu-icon {
+    float: right;
+}
+
+#menu-icon:before,
+#menu-icon:after {
+    content: '';
+    left: 0;
+    position: absolute;
+}
+
+#menu-icon:before {
+    top: -0.4em;
+}
+
+#menu-icon:after {
+    bottom: -0.4em;
+}
+
+/* Close Icon */
+nav input[type=checkbox]:checked + label #menu-icon {
+    background: transparent;
+}
+
+nav input[type=checkbox]:checked + label #menu-icon:before {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+nav input[type=checkbox]:checked + label #menu-icon:after {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+
+/*** MENU ***/
+.logo{
+    width: 60px;
+    height: 60px;
+    margin-top:-10px;
+}
+@media(max-width:908px){
+    
+
+/* Overlay */
+nav input:checked ~ #overlay {
+    background: #e5e5e5;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100vw;
+    z-index: -1;
+}
+
+/* List */
+nav ul {
+    font-size: 20px;
+    list-style: none;
+    margin: 0;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+}
+
+nav input:checked ~ ul {
+    margin: 1em;
+    max-height: inherit;
+    opacity: 1;
+}
+
+nav ul > li {
+    margin: 0.5em 0;
+}
+
+nav ul a {
+    color: #1d1f20!important;
+    text-decoration: none;
+}
+
+nav ul a:hover {
+    text-decoration: underline;
+}
+
+
+}
+/*responsive*/
+
+.menu{
+    height: 200px;
+}
+nav ul a {
+    color: #1d1f20!important;
+    text-decoration: none;
+}
+nav ul a:hover {
+    text-decoration: underline;
+    
+}
+nav ul{
+    display: flex;
+    padding: 0%;
+    margin:0%;
+    list-style: none;
+}
+nav ul li{
+    transform: translateY(-55px);
+    
+    margin-left: 20%;
+}
+nav ul a{
+    margin-left: 0px;
+} 
+.menu-icon{
+    font-size: 0;
+}
+/*slider*---------------------------------------------------------------------*/
+*{
+box-sizing: border-box;
+margin: 0;
+
+}
+
+body{
+
+    
+    min-height: 100vh;
+    
+}
+.container-slider{
+width: 100%;
+max-width: 100%;
+overflow: hidden;
+border:10px solid black ;
+position: relative;
+transform: translateY(-110px);
+}
+
+.slider{
+display: flex;
+width: 400%;    
+height: 400px;
+margin-left: -100%;
+transition: all 0.5s;
+}
+.slider_section{
+width: 100%;
+
+}
+.slider_img{
+    
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.slider_btn{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255,0.7);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.slider_btn:hover{
+background: #fff;
+
+}
+.slider_btn_right{
+margin-left: 97%;
+
+}
+.slider_btn_left{
+
+
+}
+/*footer--------------------------------*/
+.footer{
+background: black;
+width: 100%;
+height: 10%;
+margin-top: 200px;
+}
+.txtft{
+    text-align: center;
+    color: white;
+}
+/*contenido-----------------------------------*/
+.contenido{
+    margin-top: 50px;
+    width: 80%;
+    margin-left: 10%;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    
+}
+.video{
+    
+    margin-left: 30%;
+    margin-top: 60px;
+}
+/*curso------------------*/
+.content-cusrso{
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    margin-top: 50px;
+    position: relative;
+    
+    text-align: center;
+}
+.curso img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+   margin-left: 50px;
+   cursor: pointer;
+   border-radius: 20px;
+   transition: 0.5s;
+}
+.curso img:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.curso img:hover .txt{
+font-size: 20px;
+}
+.curso{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    font-size: 0;
+    transition: 0.5s;
+}
+.curso:hover{
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.txt{
+    text-align: center;
+    color: white;
+    padding: auto;
+    position: absolute;
+    cursor: pointer;
+    margin-left: 45%;
+}
+
+
+/*buscador-------------------------*/
+.content-buscar{
+    width: 100%;
+    height: 60px;
+    background: khaki;
+    display: flex;
+    
+}
+.buscar{
+    margin-left: 69%;
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+    text-indent: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+button{
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 8px;
+    border-radius: 10px;
+    height: 40px;
+    width: 60px;
+}
+
+h2 {
+  background-color: black;
+  
+  color: white;
+  font-size: 3rem;
+  line-height: 1.3em;
+  text-align: center;
+}
+.logos{
+        display: flex;
+        margin-left: 35%;
+    }
+    .l{
+        width: 30px;
+        margin-top: 9px;
+        
+    }
+    .con:hover{
+background: rgb(41, 168, 241);
+transition: 0.5s;
+    }
+    
+    .con{
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        background: rgb(255, 255, 255);
+        margin-left: 30px;
+        border-radius: 50%;
+        transition: 0.5s;
+    }
+
+
+    
